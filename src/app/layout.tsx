@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
-import { Noto_Sans_SC, Noto_Serif_SC } from "next/font/google";
+import { Anton, Inter } from "next/font/google";
 import "./globals.css";
 
-const notoSans = Noto_Sans_SC({
-  variable: "--font-noto-sans",
+const anton = Anton({
+  variable: "--font-anton",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
+  weight: ["400"],
 });
 
-const notoSerif = Noto_Serif_SC({
-  variable: "--font-noto-serif",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio Wuxia - Mestre das Artes Digitais",
-  description: "Portfolio oriental com devlog e demonstrações de projetos - Uma vitrina de habilidades em desenvolvimento web e design",
+  title: "Murilo Santos — Tecelão de Interfaces",
+  description: "Portfolio Wuxia Futurista - Mestre das Artes Digitais. O código deve ser como água — fluido, adaptável, cortando o caos com elegância.",
 };
 
 export default function RootLayout({
@@ -25,9 +25,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body
-        className={`${notoSans.variable} ${notoSerif.variable} antialiased bg-gradient-to-br from-red-900 via-black to-red-800 text-white min-h-screen`}
+        className={`${anton.variable} ${inter.variable} antialiased bg-black text-white min-h-screen overflow-x-hidden`}
       >
         {children}
       </body>

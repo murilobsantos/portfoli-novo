@@ -3,14 +3,14 @@ import Link from "next/link";
 export default function HabilidadesPage() {
   const skillCategories = [
     {
-      title: "Artes Marciais Digitais",
+      title: "Técnicas de Cultivo Digital",
       icon: "💻",
       color: "from-blue-600 to-cyan-600",
       skills: [
-        { name: "React/Next.js", level: 90 },
-        { name: "TypeScript", level: 85 },
-        { name: "Node.js", level: 80 },
-        { name: "Python", level: 75 }
+        { name: "Arte da Interface Serena (React/Next.js)", level: 90 },
+        { name: "Espada da Precisão Absoluta (TypeScript)", level: 85 },
+        { name: "Punho da Forja Digital (Node.js)", level: 80 },
+        { name: "Caminho do Dragão Escondido (Python)", level: 75 }
       ]
     },
     {
@@ -20,7 +20,6 @@ export default function HabilidadesPage() {
       skills: [
         { name: "UI/UX Design", level: 85 },
         { name: "Tailwind CSS", level: 90 },
-        { name: "Figma", level: 80 },
         { name: "Photoshop", level: 75 }
       ]
     },
@@ -30,9 +29,9 @@ export default function HabilidadesPage() {
       color: "from-yellow-600 to-orange-600",
       skills: [
         { name: "APIs REST/GraphQL", level: 85 },
-        { name: "Banco de Dados", level: 80 },
-        { name: "DevOps/CI/CD", level: 70 },
-        { name: "Testes", level: 75 }
+        { name: "Banco de Dados", level: 70 },
+        { name: "DevOps/CI/CD", level: 40 },
+        { name: "Testes", level: 55 }
       ]
     },
     {
@@ -40,8 +39,8 @@ export default function HabilidadesPage() {
       icon: "🏮",
       color: "from-red-600 to-yellow-600",
       skills: [
-        { name: "Game Development", level: 70 },
-        { name: "3D Modeling", level: 65 },
+        { name: "Game Development", level: 45 },
+        { name: "3D Modeling", level: 45 },
         { name: "Animação", level: 60 },
         { name: "Áudio Design", level: 55 }
       ]
@@ -56,10 +55,10 @@ export default function HabilidadesPage() {
             武艺技能
           </h1>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-yellow-400">
-            Habilidades - As Artes Dominadas
+            Técnicas de Cultivo - As Artes Dominadas
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Cada habilidade representa anos de treinamento, batalhas travadas e técnicas aperfeiçoadas.
+            Cada técnica representa anos de treinamento, batalhas travadas e artes aperfeiçoadas no caminho do cultivo digital.
           </p>
         </header>
 
@@ -98,7 +97,7 @@ export default function HabilidadesPage() {
 
         <section className="mt-16 text-center">
           <div className="wuxia-border wuxia-glow rounded-lg p-8 bg-black/50 max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-yellow-400 mb-6">Filosofia das Habilidades</h3>
+            <h3 className="text-3xl font-bold text-yellow-400 mb-6">Filosofia das Técnicas de Cultivo</h3>
             <div className="grid md:grid-cols-3 gap-8 text-left">
               <div className="text-center">
                 <div className="text-5xl mb-4">🎯</div>

@@ -1,41 +1,239 @@
 @import "tailwindcss";
 
 :root {
-  --background: #1a0a0a;
-  --foreground: #f5f5f5;
-  --accent-red: #dc2626;
-  --accent-gold: #fbbf24;
-  --accent-black: #0a0a0a;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  --font-anton: 'Anton', sans-serif;
+  --font-inter: 'Inter', sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-noto-sans);
-  --font-serif: var(--font-noto-serif);
+@layer base {
+  body {
+    @apply bg-black text-white;
+    font-family: var(--font-inter);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-anton);
+    @apply font-normal;
+  }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-noto-sans), Arial, Helvetica, sans-serif;
+@layer components {
+  /* Wuxia Futurista Theme Components */
+
+  /* Background Effects */
+  .wuxia-bg {
+    @apply relative;
+    background: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+  }
+
+  .wuxia-bg::before {
+    content: '';
+    @apply absolute inset-0 opacity-20;
+    background:
+      radial-gradient(circle at 20% 80%, rgba(255, 30, 53, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(122, 0, 255, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(255, 30, 53, 0.08) 0%, transparent 50%);
+  }
+
+  /* Text Effects */
+  .wuxia-text-glow {
+    text-shadow:
+      0 0 10px rgba(255, 30, 53, 0.5),
+      0 0 20px rgba(255, 30, 53, 0.3),
+      0 0 30px rgba(255, 30, 53, 0.2);
+  }
+
+  .wuxia-text-outline {
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000,
+      0 0 10px rgba(255, 30, 53, 0.5);
+  }
+
+  /* Border Effects */
+  .wuxia-border {
+    @apply relative;
+    border: 1px solid rgba(255, 30, 53, 0.3);
+    box-shadow:
+      inset 0 0 10px rgba(255, 30, 53, 0.1),
+      0 0 20px rgba(255, 30, 53, 0.2);
+  }
+
+  .wuxia-border::before {
+    content: '';
+    @apply absolute inset-0 rounded-lg;
+    background: linear-gradient(45deg, transparent, rgba(255, 30, 53, 0.1), transparent);
+    animation: borderGlow 3s ease-in-out infinite;
+  }
+
+  /* Glow Effects */
+  .wuxia-glow {
+    box-shadow:
+      0 0 20px rgba(255, 30, 53, 0.3),
+      0 0 40px rgba(255, 30, 53, 0.2),
+      0 0 60px rgba(255, 30, 53, 0.1);
+  }
+
+  .wuxia-glow-hover:hover {
+    box-shadow:
+      0 0 30px rgba(255, 30, 53, 0.5),
+      0 0 60px rgba(255, 30, 53, 0.3),
+      0 0 90px rgba(255, 30, 53, 0.2);
+  }
+
+  /* Metallic Effects */
+  .metallic-text {
+    background: linear-gradient(45deg, #2a2a2a, #404040, #2a2a2a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Smoke/Fog Effects */
+  .smoke-effect {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .smoke-effect::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(ellipse at top, rgba(255, 30, 53, 0.1) 0%, transparent 70%),
+      radial-gradient(ellipse at bottom, rgba(122, 0, 255, 0.05) 0%, transparent 70%);
+    animation: smokeDrift 8s ease-in-out infinite alternate;
+    pointer-events: none;
+  }
+
+  /* Oriental Pattern Background */
+  .oriental-pattern {
+    background-image:
+      radial-gradient(circle at 25% 25%, rgba(255, 30, 53, 0.05) 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, rgba(122, 0, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px, 30px 30px;
+    background-position: 0 0, 25px 25px;
+  }
+
+  /* Oni Mask Inspired Shapes */
+  .oni-shape {
+    position: relative;
+  }
+
+  .oni-shape::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, rgba(255, 30, 53, 0.3), rgba(122, 0, 255, 0.2));
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation: oniPulse 4s ease-in-out infinite;
+  }
+
+  /* Runes and Scales Texture */
+  .rune-texture {
+    background-image:
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 30, 53, 0.1) 2px,
+        rgba(255, 30, 53, 0.1) 4px
+      );
+  }
+
+  /* Brush Stroke Effects */
+  .brush-stroke {
+    position: relative;
+  }
+
+  .brush-stroke::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(255, 30, 53, 0.6), transparent);
+    border-radius: 2px;
+  }
 }
 
-/* Wuxia/Oriental Theme Styles */
-.wuxia-glow {
-  box-shadow: 0 0 20px rgba(220, 38, 38, 0.5), 0 0 40px rgba(251, 191, 36, 0.3);
+@layer utilities {
+  /* Custom scrollbar */
+  .scrollbar-wuxia::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .scrollbar-wuxia::-webkit-scrollbar-track {
+    background: #000;
+  }
+
+  .scrollbar-wuxia::-webkit-scrollbar-thumb {
+    background: rgba(255, 30, 53, 0.5);
+    border-radius: 4px;
+  }
+
+  .scrollbar-wuxia::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 30, 53, 0.7);
+  }
 }
 
-.wuxia-border {
-  border: 2px solid var(--accent-gold);
-  box-shadow: inset 0 0 10px rgba(251, 191, 36, 0.2);
+/* Animations */
+@keyframes borderGlow {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
 }
 
-.wuxia-text-glow {
-  text-shadow: 0 0 10px rgba(251, 191, 36, 0.8), 0 0 20px rgba(220, 38, 38, 0.4);
+@keyframes smokeDrift {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-20px) rotate(1deg);
+    opacity: 0.6;
+  }
 }
 
-.oriental-pattern {
-  background-image: radial-gradient(circle at 25% 25%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
-                    radial-gradient(circle at 75% 75%, rgba(220, 38, 38, 0.1) 0%, transparent 50%);
+@keyframes oniPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .wuxia-text-glow {
+    text-shadow:
+      0 0 5px rgba(255, 30, 53, 0.5),
+      0 0 10px rgba(255, 30, 53, 0.3);
+  }
+
+  .wuxia-glow {
+    box-shadow:
+      0 0 10px rgba(255, 30, 53, 0.3),
+      0 0 20px rgba(255, 30, 53, 0.2);
+  }
 }

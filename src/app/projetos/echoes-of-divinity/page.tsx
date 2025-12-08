@@ -19,7 +19,7 @@ export default function EchoesOfDivinityPage() {
             Echoes of Divinity
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Onde o fluxo da energia ancestral encontra a precisão digital. Uma jornada através dos reinos esquecidos, onde cada batalha é uma lição de domínio.
+            Onde todas as mitologias colidem em um mundo aberto infinito. Uma jornada cósmica onde cada escolha molda a realidade, influenciando a história como um todo através dos ciclos eternos da existência.
           </p>
         </header>
 
@@ -34,10 +34,10 @@ export default function EchoesOfDivinityPage() {
               <div>
                 <h4 className="text-xl font-bold text-red-400 mb-4">Visão do Projeto</h4>
                 <p className="text-gray-300 mb-4">
-                  Echoes of Divinity é mais que um jogo — é uma meditação digital sobre o poder da repetição e o fluxo da energia. Cada movimento, cada decisão, reflete a filosofia do Tecelão das Rotas: força através da harmonia, domínio através da prática.
+                  Echoes of Divinity é um mundo aberto infinito onde todas as mitologias colidem em uma tapeçaria cósmica. O jogador não segue um caminho predeterminado — cria sua própria jornada, influenciando a história como um todo através das escolhas que moldam a realidade.
                 </p>
                 <p className="text-gray-300">
-                  Os jogadores assumem o papel de guerreiros digitais em um mundo onde a tecnologia antiga e a sabedoria ancestral se entrelaçam, criando uma experiência que transcende o entretenimento para se tornar uma jornada de crescimento pessoal.
+                  Cada decisão reverbera através dos ciclos eternos da existência, alterando alianças divinas, reescrevendo lendas antigas e determinando o destino de deuses e mortais. O jogo transcende o entretenimento para se tornar uma jornada de autodescoberta e criação mítica.
                 </p>
               </div>
               <div>
@@ -106,13 +106,13 @@ export default function EchoesOfDivinityPage() {
           {/* Features */}
           <section className="wuxia-border wuxia-glow rounded-lg p-8 bg-black/50">
             <h3 className="text-3xl font-bold text-yellow-400 mb-6 text-center">
-              Os Caminhos da Jornada
+              Os Caminhos da Jornada Cósmica
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-3xl mb-3">🏛️</div>
-                <h4 className="font-bold text-red-400 mb-2">Reinos Antigos</h4>
-                <p className="text-gray-300 text-sm">Explore templos digitais onde a sabedoria ancestral reside.</p>
+                <div className="text-3xl mb-3">🌌</div>
+                <h4 className="font-bold text-red-400 mb-2">Mundo Aberto Infinito</h4>
+                <p className="text-gray-300 text-sm">Um universo onde todas as mitologias colidem e se entrelaçam.</p>
               </div>
               <div className="text-center">
                 <div className="text-3xl mb-3">⚔️</div>
@@ -120,9 +120,9 @@ export default function EchoesOfDivinityPage() {
                 <p className="text-gray-300 text-sm">Combate que honra o fluxo da energia, não a força bruta.</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl mb-3">📜</div>
-                <h4 className="font-bold text-red-400 mb-2">Narrativa Evolutiva</h4>
-                <p className="text-gray-300 text-sm">Histórias que crescem com o jogador, refletindo sua jornada.</p>
+                <div className="text-3xl mb-3">🌟</div>
+                <h4 className="font-bold text-red-400 mb-2">Escolhas que Moldam a Realidade</h4>
+                <p className="text-gray-300 text-sm">Cada decisão influencia a história como um todo através dos ciclos eternos.</p>
               </div>
               <div className="text-center">
                 <div className="text-3xl mb-3">🎭</div>

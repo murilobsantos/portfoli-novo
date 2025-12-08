@@ -34,14 +34,7 @@ export default function ProjetosPage() {
       status: "Showcase",
       icon: "🚀"
     },
-    {
-      title: "Echoes of Eternity",
-      description: "Jogo de aventura narrativa onde jogadores exploram memórias coletivas e constroem sua própria história.",
-      tech: ["Unity", "C#", "Blender", "FMOD"],
-      link: "/showcases/echoes-of-eternity",
-      status: "Showcase",
-      icon: "🌌"
-    },
+
     {
       title: "Universo de Histórias",
       description: "Plataforma interativa para criação colaborativa de histórias, com sistema de mundos compartilhados.",
