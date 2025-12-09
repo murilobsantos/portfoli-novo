@@ -6,7 +6,7 @@ export default function ProjetosPage() {
       title: "Echoes of Divinity",
       description: "Um jogo de RPG épico ambientado em um mundo de fantasia oriental, onde jogadores exploram reinos antigos e enfrentam deuses esquecidos.",
       tech: ["React", "TypeScript", "Three.js", "Node.js"],
-      link: "/projetos/echoes-of-divinity",
+      link: "/projetos/echoes-of-divinity-projeto",
       status: "Em Desenvolvimento",
       icon: "🏛️"
     },

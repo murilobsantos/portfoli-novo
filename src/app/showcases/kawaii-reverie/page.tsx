@@ -45,3 +45,61 @@ export default function KawaiiReveriePage() {
                 </p>
               </div>
               <div>
+                <h4 className="text-xl font-bold text-pink-400 mb-4">Tecnologias Utilizadas</h4>
+                <p className="text-gray-300 mb-4">
+                  O projeto utiliza uma combinação de tecnologias modernas para criar uma experiência fluida e encantadora:
+                </p>
+                <ul className="text-gray-300 space-y-2">
+                  <li>• React com TypeScript para interatividade robusta</li>
+                  <li>• Tailwind CSS para estilização kawaii personalizada</li>
+                  <li>• Next.js para otimização de performance</li>
+                  <li>• Animações CSS e JavaScript para efeitos mágicos</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* Features */}
+          <section className="wuxia-border wuxia-glow rounded-lg p-8 bg-black/50">
+            <h3 className="text-3xl font-bold text-pink-400 mb-6 text-center">
+              Características Encantadoras
+            </h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="text-4xl mb-4">🌸</div>
+                <h4 className="text-lg font-bold text-pink-400 mb-2">Design Kawaii</h4>
+                <p className="text-gray-300 text-sm">
+                  Elementos visuais fofos que trazem alegria e leveza à interface.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-4">✨</div>
+                <h4 className="text-lg font-bold text-pink-400 mb-2">Interatividade Mágica</h4>
+                <p className="text-gray-300 text-sm">
+                  Animações suaves e efeitos visuais que encantam o usuário.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-4">🎨</div>
+                <h4 className="text-lg font-bold text-pink-400 mb-2">Paleta Pastel</h4>
+                <p className="text-gray-300 text-sm">
+                  Cores suaves e harmoniosas que criam uma atmosfera acolhedora.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Back to Projects */}
+          <div className="text-center mt-16">
+            <Link
+              href="/projetos"
+              className="inline-block px-6 py-3 border-2 border-pink-500 text-pink-400 font-bold rounded-lg hover:bg-pink-500 hover:text-black transition-all duration-300"
+            >
+              ← Voltar aos Projetos
+            </Link>
+          </div>
+        </main>
+      </div>
+    </div>
+  );
+}
