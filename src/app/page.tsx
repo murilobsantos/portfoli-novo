@@ -88,13 +88,15 @@ export default function Home() {
 
             <div className="flex justify-center">
               <div className="w-80 h-80 wuxia-border rounded-full overflow-hidden wuxia-glow">
-                <Image
-                  src="/murilo santos.png"
-                  alt="Murilo Santos - Tecelão de Interfaces"
-                  width={320}
-                  height={320}
-                  className="w-full h-full object-cover"
-                />
+              <Image
+                src="/murilo santos.png?v=2"
+                alt="Murilo Santos - Tecelão de Interfaces"
+                width={320}
+                height={320}
+                className="w-full h-full object-cover"
+                loading="eager"
+                unoptimized
+              />
               </div>
             </div>
           </div>
@@ -257,13 +259,13 @@ export default function Home() {
 
           {/* Assinatura Visual */}
           <div className="mt-12 flex flex-col items-center gap-6">
-            <div className="wuxia-border rounded-lg p-4 bg-black/30">
+            <div className="wuxia-border rounded-lg p-4 bg-black/30 relative w-36 h-36">
               <Image
                 src="/identidade visual.png"
                 alt="Identidade Visual de Murilo Santos"
-                width={150}
-                height={150}
-                className="wuxia-glow"
+                fill
+                sizes="144px"
+                className="wuxia-glow object-cover"
               />
             </div>
             <div className="flex justify-center gap-6 text-sm text-gray-500">
