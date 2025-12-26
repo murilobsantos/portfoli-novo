@@ -167,6 +167,16 @@ export default function UniversoDeHistoriasPage() {
 
         {/* Footer */}
         <footer className="text-center mt-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <a
+              href="https://universohistorias.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              🌟 Acessar Universo de Histórias Online 🌟
+            </a>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               href="/projetos"
