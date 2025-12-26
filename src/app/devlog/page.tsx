@@ -20,6 +20,58 @@ export default function DevlogPage() {
           {/* Latest Devlog Entry */}
           <article className="wuxia-border wuxia-glow rounded-lg p-8 bg-black/50">
             <div className="flex items-center gap-4 mb-6">
+              <div className="text-3xl">🔧</div>
+              <div>
+                <h3 className="text-2xl font-bold text-yellow-400">Atualização: Correção de Build Netlify e Link para Projeto Online</h3>
+                <time className="text-gray-400">Dezembro, 2025</time>
+              </div>
+            </div>
+            <div className="prose prose-lg prose-invert max-w-none">
+              <p className="text-gray-300 leading-relaxed mb-4">
+                Resolvi um erro crítico de build no Netlify relacionado à importação de tipos TypeScript e adicionei um link direto para o projeto "Universo de Histórias" hospedado online. Essas correções garantiram que o portfolio seja implantado corretamente e que os visitantes possam acessar facilmente o projeto colaborativo.
+              </p>
+              <h4 className="text-xl font-bold text-red-400 mb-2">Features Implementadas:</h4>
+              <ul className="text-gray-300 space-y-2 mb-4">
+                <li>• Correção da importação de Metadata no layout.tsx (type-only import)</li>
+                <li>• Adição de botão destacado no footer da página Universo de Histórias</li>
+                <li>• Link direto para o projeto online em https://universohistorias.netlify.app</li>
+                <li>• Estilização do botão com gradiente roxo-azul e efeitos hover</li>
+                <li>• Abertura do link em nova aba com target="_blank" e rel="noopener noreferrer"</li>
+              </ul>
+              <h4 className="text-xl font-bold text-red-400 mb-2">Bugs Corrigidos:</h4>
+              <ul className="text-gray-300 space-y-2 mb-4">
+                <li>• Erro de compilação TypeScript: "Left side of comma operator is unused and has no side effects"</li>
+                <li>• Falha no build do Netlify devido à importação incorreta de tipos</li>
+                <li>• Página 404 para showcases/universo-de-historias (resolvido após deploy)</li>
+              </ul>
+              <h4 className="text-xl font-bold text-red-400 mb-2">Técnicas Aprendidas:</h4>
+              <ul className="text-gray-300 space-y-2 mb-4">
+                <li>• Correção de imports type-only vs runtime em TypeScript/Next.js</li>
+                <li>• Estratégias para adicionar links externos em aplicações Next.js</li>
+                <li>• Configuração de botões CTA (Call-to-Action) para projetos externos</li>
+                <li>• Resolução de erros de build em plataformas de CI/CD como Netlify</li>
+                <li>• Melhores práticas para links externos (segurança e UX)</li>
+              </ul>
+              <h4 className="text-xl font-bold text-red-400 mb-2">Desafios Superados:</h4>
+              <ul className="text-gray-300 space-y-2 mb-4">
+                <li>• Diagnóstico de erro críptico de TypeScript relacionado a operadores de vírgula</li>
+                <li>• Identificação da causa raiz: importação incorreta de tipos em Next.js 16</li>
+                <li>• Implementação de link para projeto externo mantendo consistência visual</li>
+                <li>• Garantia de que o botão seja acessível e funcione em todos os dispositivos</li>
+              </ul>
+              <h4 className="text-xl font-bold text-red-400 mb-2">Próximos Passos:</h4>
+              <ul className="text-gray-300 space-y-2">
+                <li>• Adicionar mais links para projetos online conforme eles forem lançados</li>
+                <li>• Implementar sistema de notificações para atualizações de projetos</li>
+                <li>• Melhorar analytics para rastrear cliques em links externos</li>
+                <li>• Explorar integração com plataformas de hosting para deploy automático</li>
+              </ul>
+            </div>
+          </article>
+
+          {/* Previous Latest Devlog Entry */}
+          <article className="wuxia-border wuxia-glow rounded-lg p-8 bg-black/50">
+            <div className="flex items-center gap-4 mb-6">
               <div className="text-3xl">🚀</div>
               <div>
                 <h3 className="text-2xl font-bold text-yellow-400">Atualização: Implementação de Página de Contato e Melhorias na Homepage</h3>
@@ -307,7 +359,7 @@ export default function DevlogPage() {
               <div className="text-3xl">🚀</div>
               <div>
                 <h3 className="text-2xl font-bold text-yellow-400">Atualização: Otimização de Imagens e Configurações Next.js</h3>
-                <time className="text-gray-400">Dezembro, 2024</time>
+                <time className="text-gray-400">Dezembro, 2025</time>
               </div>
             </div>
             <div className="prose prose-lg prose-invert max-w-none">
@@ -345,7 +397,7 @@ export default function DevlogPage() {
               <div className="text-3xl">📅</div>
               <div>
                 <h3 className="text-2xl font-bold text-yellow-400">Dia 1: Iniciando a Jornada</h3>
-                <time className="text-gray-400">Ontem, Dezembro 2025</time>
+                <time className="text-gray-400">Outubro, 2025</time>
               </div>
             </div>
             <div className="prose prose-lg prose-invert max-w-none">
