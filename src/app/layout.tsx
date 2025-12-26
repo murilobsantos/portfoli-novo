@@ -15,7 +15,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio"
+  title: "Portfolio",
+  description: "Portfolio de Murilo Santos"
 };
 
 export default function RootLayout({
