@@ -111,7 +111,7 @@ export default function Home() {
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Link href="/projetos/echoes-of-divinity" className="group block wuxia-border wuxia-glow rounded-lg p-6 bg-black/50 hover:bg-black/70 transition-all duration-300 transform hover:scale-105">
+            <Link href="/projetos/echoes-of-divinity-projeto" className="group block wuxia-border wuxia-glow rounded-lg p-6 bg-black/50 hover:bg-black/70 transition-all duration-300 transform hover:scale-105">
               <div className="text-6xl mb-4">🎮</div>
               <h3 className="text-2xl font-bold mb-4 text-red-400">Echoes of Divinity</h3>
               <p className="text-gray-300 mb-4">

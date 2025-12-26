@@ -1,6 +1,7 @@
-- [x] Create src/app/contato/page.tsx with contact form and Wuxia styling
-- [x] Update src/app/page.tsx to replace Habilidades section with Projetos section (featured projects)
-- [x] Update src/app/page.tsx to replace Footer with Contato section (contact form)
-- [x] Verify responsive design and Wuxia theme compliance
-- [x] Integrate all available images (Logo.png, murilo santos.png, identidade visual.png) to build personal identity
-- [x] Fix image loading issues by moving images to public directory
+- [x] Update devlog with latest features/achievements (contact page, home page updates, responsive design, image integration)
+- [x] Include notes on potential bugs (non-functional contact form, performance issues with images, responsive design edge cases)
+- [x] Verify the devlog update is correctly formatted and displays properly
+- [x] Add new devlog entries for performance monitoring tools, backend for contact form, and advanced image optimization
+- [x] Fix ESLint errors for unescaped quotes in JSX content
+- [x] Fix broken link for "Echoes of Divinity" project (404 error resolved by correcting href paths)
+- [x] Fix non-clickable interactive components in Echoes of Divinity demo (added type="button" and cursor-pointer to all buttons)

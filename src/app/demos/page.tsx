@@ -77,18 +77,55 @@ export default function DemosPage() {
                 </div>
               </Link>
 
-              <div className="wuxia-border rounded-lg p-6 bg-black/20 border-dashed border-purple-500/30">
-                <div className="text-4xl mb-4 opacity-50">💡</div>
-                <h4 className="text-xl font-bold mb-3 text-gray-500">
-                  Sugestões?
+              <Link
+                href="/demos/estudapenal"
+                className="group block wuxia-border wuxia-glow rounded-lg p-6 bg-black/30 hover:bg-black/50 transition-all duration-300 transform hover:scale-105"
+              >
+                <div className="text-4xl mb-4">⚖️</div>
+                <h4 className="text-xl font-bold mb-3 text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                  Estuda Penal
                 </h4>
-                <p className="text-gray-500 text-sm mb-4">
-                  Tem uma ideia para uma demo interessante? Entre em contato!
+                <p className="text-gray-300 text-sm mb-4">
+                  Plataforma interativa de estudo jurídico. Responda questões, acompanhe progresso e domine o direito penal.
                 </p>
-                <div className="text-gray-600 text-xs">
-                  Feedback é sempre bem-vindo
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded">React</span>
+                  <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded">TypeScript</span>
+                  <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded">Next.js</span>
+                  <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded">Tailwind</span>
                 </div>
-              </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-purple-400 text-sm group-hover:translate-x-1 transition-transform">
+                    Estudar Demo →
+                  </span>
+                  <span className="text-yellow-400 text-xs">Educacional</span>
+                </div>
+              </Link>
+
+              <Link
+                href="/demos/kawaii-reverie"
+                className="group block wuxia-border wuxia-glow rounded-lg p-6 bg-black/30 hover:bg-black/50 transition-all duration-300 transform hover:scale-105"
+              >
+                <div className="text-4xl mb-4">🌸</div>
+                <h4 className="text-xl font-bold mb-3 text-pink-400 group-hover:text-pink-300 transition-colors">
+                  Kawaii Reverie
+                </h4>
+                <p className="text-gray-300 text-sm mb-4">
+                  Playground kawaii interativo. Crie, personalize e anime elementos fofos em um mundo pastel encantador.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="px-2 py-1 bg-pink-500/20 text-pink-400 text-xs rounded">React</span>
+                  <span className="px-2 py-1 bg-pink-500/20 text-pink-400 text-xs rounded">TypeScript</span>
+                  <span className="px-2 py-1 bg-pink-500/20 text-pink-400 text-xs rounded">Next.js</span>
+                  <span className="px-2 py-1 bg-pink-500/20 text-pink-400 text-xs rounded">Tailwind</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-purple-400 text-sm group-hover:translate-x-1 transition-transform">
+                    Explorar Demo →
+                  </span>
+                  <span className="text-yellow-400 text-xs">Criativo</span>
+                </div>
+              </Link>
             </div>
           </section>
 

@@ -69,6 +69,7 @@
     @apply absolute inset-0 rounded-lg;
     background: linear-gradient(45deg, transparent, rgba(255, 30, 53, 0.1), transparent);
     animation: borderGlow 3s ease-in-out infinite;
+    pointer-events: none;
   }
 
   /* Glow Effects */

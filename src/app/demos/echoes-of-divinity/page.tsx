@@ -103,7 +103,7 @@ export default function EchoesOfDivinityDemo() {
         </header>
 
         {/* Interactive Demo */}
-        <section className="wuxia-border wuxia-glow rounded-lg p-8 bg-black/50 mb-16">
+        <section className="wuxia-border wuxia-glow rounded-lg p-8 bg-black/50 mb-16" style={{ position: 'relative', zIndex: 1 }}>
           <h3 className="text-3xl font-bold text-red-400 mb-6 text-center">
             Jornada do Espírito
           </h3>
@@ -112,8 +112,9 @@ export default function EchoesOfDivinityDemo() {
           <div className="flex justify-center mb-8">
             <div className="flex bg-black/30 rounded-lg p-1">
               <button
+                type="button"
                 onClick={() => setActiveTab('character')}
-                className={`px-6 py-3 rounded-lg font-bold transition-all duration-300 ${
+                className={`px-6 py-3 rounded-lg font-bold transition-all duration-300 cursor-pointer ${
                   activeTab === 'character'
                     ? 'bg-red-600 text-white'
                     : 'text-gray-400 hover:text-red-400'
@@ -122,8 +123,10 @@ export default function EchoesOfDivinityDemo() {
                 👤 Personagem
               </button>
               <button
+                type="button"
                 onClick={() => setActiveTab('inventory')}
-                className={`px-6 py-3 rounded-lg font-bold transition-all duration-300 ${
+                style={{ position: 'relative', zIndex: 999999 }}
+                className={`px-6 py-3 rounded-lg font-bold transition-all duration-300 cursor-pointer ${
                   activeTab === 'inventory'
                     ? 'bg-red-600 text-white'
                     : 'text-gray-400 hover:text-red-400'
@@ -132,8 +135,10 @@ export default function EchoesOfDivinityDemo() {
                 🎒 Inventário
               </button>
               <button
+                type="button"
                 onClick={() => setActiveTab('quests')}
-                className={`px-6 py-3 rounded-lg font-bold transition-all duration-300 ${
+                style={{ position: 'relative', zIndex: 999999 }}
+                className={`px-6 py-3 rounded-lg font-bold transition-all duration-300 cursor-pointer ${
                   activeTab === 'quests'
                     ? 'bg-red-600 text-white'
                     : 'text-gray-400 hover:text-red-400'
@@ -222,8 +227,9 @@ export default function EchoesOfDivinityDemo() {
                           <span className="text-green-400 font-bold">✓ Concluída</span>
                         ) : (
                           <button
+                            type="button"
                             onClick={() => completeQuest(quest.id)}
-                            className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+                            className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors cursor-pointer"
                           >
                             Completar
                           </button>
@@ -248,7 +254,7 @@ export default function EchoesOfDivinityDemo() {
               ← Voltar aos Demos
             </Link>
             <Link
-              href="/projetos/echoes-of-divinity"
+              href="/projetos/echoes-of-divinity-projeto"
               className="inline-block px-6 py-3 border border-red-500 text-red-400 font-bold rounded-lg hover:bg-red-500 hover:text-white transition-all duration-300"
             >
               Ver Projeto Completo →
