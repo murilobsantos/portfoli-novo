@@ -15,8 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Murilo Santos — Tecelão de Interfaces",
-  description: "Portfolio Wuxia Futurista - Mestre das Artes Digitais. O código deve ser como água — fluido, adaptável, cortando o caos com elegância.",
+  title: "Portfolio",
 };
 
 export default function RootLayout({
