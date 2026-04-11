@@ -1,31 +1,8 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
 
 export default function ContatoPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Mensagem enviada! Entrarei em contato em breve.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
-  };
-
   return (
     <div className="min-h-screen wuxia-bg smoke-effect">
       <div className="container mx-auto px-4 py-16">
@@ -44,9 +21,17 @@ export default function ContatoPage() {
             </p>
           </header>
 
-          {/* Contact Form */}
+          {/* Contact Form - Netlify ready (funciona só em deploy) */}
           <div className="wuxia-border wuxia-glow rounded-lg p-8 bg-black/50 max-w-2xl mx-auto">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Honeypot anti-spam */}
+            <div style={{position: 'absolute', left: '-9999px'}}>
+              <input name="bot-field" />
+            </div>
+            <form name="contact" method="POST" data-netlify="true" className="space-y-6">
+              <input type="hidden" name="form-name" value="contact" />
+              <p className="hidden">
+                <label>Não preencha este campo! <input name="bot-field" /></label>
+              </p>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-bold text-red-400 mb-2">
@@ -56,8 +41,6 @@ export default function ContatoPage() {
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-gray-800 border border-red-500/30 rounded-lg text-white placeholder-gray-400 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 transition-colors"
                     placeholder="Seu nome completo"
@@ -71,8 +54,6 @@ export default function ContatoPage() {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-gray-800 border border-red-500/30 rounded-lg text-white placeholder-gray-400 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 transition-colors"
                     placeholder="seu.email@exemplo.com"
@@ -88,8 +69,6 @@ export default function ContatoPage() {
                   type="text"
                   id="subject"
                   name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-gray-800 border border-red-500/30 rounded-lg text-white placeholder-gray-400 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 transition-colors"
                   placeholder="Sobre o que deseja falar?"
@@ -103,8 +82,6 @@ export default function ContatoPage() {
                 <textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleChange}
                   required
                   rows={6}
                   className="w-full px-4 py-3 bg-gray-800 border border-red-500/30 rounded-lg text-white placeholder-gray-400 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 transition-colors resize-none"
@@ -118,7 +95,7 @@ export default function ContatoPage() {
                   className="px-8 py-4 bg-gradient-to-r from-red-600 to-red-800 text-white font-bold text-lg rounded-lg wuxia-glow-hover wuxia-border transform hover:scale-105 transition-all duration-300"
                 >
                   <span className="flex items-center justify-center gap-2">
-                    📨 Enviar Mensagem
+                    📨 Enviar Mensagem (Netlify Deploy)
                   </span>
                 </button>
               </div>
@@ -164,3 +141,4 @@ export default function ContatoPage() {
     </div>
   );
 }
+
