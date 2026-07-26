@@ -58,3 +58,6 @@ id_ed25519
 .DS_Store
 Thumbs.db
 Desktop.ini
+
+# Local Netlify folder
+.netlify

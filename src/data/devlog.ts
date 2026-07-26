@@ -24,6 +24,7 @@ export const devlogEntries: DevlogEntry[] = [
       "Cards dinâmicos para repositórios públicos do GitHub, com fallback seguro.",
       "Página própria do Eclipse System Recovery e redirecionamento da demo empresarial legada.",
       "Limpeza estrutural do Universo de Histórias e definição do contrato inicial do backend.",
+      "Versão atualizada publicada em produção no Netlify.",
     ],
     nextStep: "Implementar autenticação e publicação de histórias no Universo de Histórias.",
     icon: "🧭",
