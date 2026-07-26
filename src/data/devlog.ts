@@ -13,6 +13,23 @@ export type DevlogEntry = {
 
 export const devlogEntries: DevlogEntry[] = [
   {
+    id: "2026-07-echoes-vertical-slice",
+    period: "26 de julho de 2026",
+    dateTime: "2026-07-26",
+    phase: "Fase ativa — Echoes of Divinity",
+    title: "Vertical slice iniciado: o eco volta a responder",
+    summary:
+      "O foco saiu do Universo de Histórias, agora em manutenção, e entrou no protótipo Echoes of Divinity para consolidar um ciclo jogável curto e verificável.",
+    highlights: [
+      "Auditoria confirmou cinco salas, afinidades, ecos, combate, habilidades, ruptura e finais já presentes no protótipo.",
+      "Correções iniciais restauraram o estado de sala, a transição da introdução para o mundo e a interação de absorver/destruir ecos pelo teclado.",
+      "Servidor local e verificações de sintaxe passaram; o projeto recebeu Git, README e checklist de teste manual.",
+    ],
+    nextStep: "Testar a travessia completa até o Santuário, corrigir feedback de combate e balancear o loop para uma sessão de 10 a 15 minutos.",
+    icon: "⚔️",
+    current: true,
+  },
+  {
     id: "2026-07-universo-modernizacao",
     period: "26 de julho de 2026",
     dateTime: "2026-07-26",
@@ -28,7 +45,6 @@ export const devlogEntries: DevlogEntry[] = [
     ],
     nextStep: "Executar testes de jornada, acessibilidade e responsividade com pessoas reais antes de considerar moderação, recuperação de senha ou pagamentos.",
     icon: "📚",
-    current: true,
   },
   {
     id: "2026-07-portfolio-hub",
