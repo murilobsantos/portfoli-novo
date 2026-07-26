@@ -25,6 +25,7 @@ export const devlogEntries: DevlogEntry[] = [
       "Correções iniciais restauraram o estado de sala, a transição da introdução para o mundo e a interação de absorver/destruir ecos pelo teclado.",
       "A primeira direção de arte substituiu o grid cru por ruínas ilustradas, HUD de essência/vigor e telas narrativas próprias.",
       "O Viajante do Eco e o Guardião agora usam sprites humanoides originais; os ecos luminosos ficaram restritos ao papel de fragmentos coletáveis do mundo.",
+      "A apresentação foi reconstruída como mapa RPG top-down: câmara pixelada, piso contínuo, ruínas e obstáculos, com a malha reduzida à colisão invisível em vez de labirinto visível.",
       "Partículas e efeitos de impacto agora respondem a ecos, dano, ataque, dom e ruptura; a vitrine do portfólio foi alinhada ao protótipo real.",
       "Servidor local e verificações de sintaxe passaram; o projeto recebeu Git, README e checklist de teste manual.",
     ],

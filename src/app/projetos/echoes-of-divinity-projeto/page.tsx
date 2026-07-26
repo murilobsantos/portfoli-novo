@@ -3,14 +3,14 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Echoes of Divinity — Vertical Slice',
-  description: 'Protótipo 2D de exploração e combate em grid, em desenvolvimento.',
+  description: 'Protótipo 2D top-down de exploração e combate, em desenvolvimento.',
 }
 
 const features = [
   ['Cinco salas conectadas', 'Câmara do Despertar, Guerra, Memória, Liberdade e Santuário final.'],
   ['Ecos e afinidades', 'Absorver ou dissipar ecos altera ordem, memória e liberdade.'],
   ['Combate e dons', 'Ataque, habilidades desbloqueáveis, ruptura e finais baseados na jornada.'],
-  ['Direção de arte inicial', 'Ruínas do Panteão Quebrado, entidades luminosas, HUD e efeitos de impacto.'],
+  ['Direção de arte top-down', 'Câmara pixelada do Panteão Quebrado, personagens, ruínas, HUD e efeitos de impacto.'],
 ]
 
 export default function EchoesOfDivinityPage() {
