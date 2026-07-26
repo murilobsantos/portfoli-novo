@@ -24,7 +24,7 @@ export const devlogEntries: DevlogEntry[] = [
       "Autenticação, publicação, detalhes e leitura de capítulos integrados ao backend em produção.",
       "Perfis reorganizados como vitrines: avatar e banner pessoais, tema, moldura, conquistas, citações e loja de moedas de leitura.",
       "Rotas de descoberta, favoritos, categorias e edição modernizadas; páginas institucionais não simulam pagamentos ou usuários.",
-      "Publicação de Arquivo das Cinco Luzes, obra-vitrine original com cinco capítulos e capa própria para validar a jornada completa.",
+      "Publicação de Arquivo das Cinco Luzes, obra-vitrine original com cinco capítulos de 1,5 mil a 1,6 mil palavras e capa própria para validar a jornada completa.",
     ],
     nextStep: "Executar testes de jornada, acessibilidade e responsividade com pessoas reais antes de considerar moderação, recuperação de senha ou pagamentos.",
     icon: "📚",
