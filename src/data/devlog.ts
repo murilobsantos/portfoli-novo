@@ -13,6 +13,24 @@ export type DevlogEntry = {
 
 export const devlogEntries: DevlogEntry[] = [
   {
+    id: "2026-07-universo-modernizacao",
+    period: "26 de julho de 2026",
+    dateTime: "2026-07-26",
+    phase: "Entrega — Universo de Histórias",
+    title: "Comunidade literária, leitura real e vitrine de autor",
+    summary:
+      "O Universo de Histórias deixou a camada legada para trás e passou a funcionar como uma comunidade literária com leitura, autoria e personalização conectadas ao backend.",
+    highlights: [
+      "Autenticação, publicação, detalhes e leitura de capítulos integrados ao backend em produção.",
+      "Perfis reorganizados como vitrines: avatar e banner pessoais, tema, moldura, conquistas, citações e loja de moedas de leitura.",
+      "Rotas de descoberta, favoritos, categorias e edição modernizadas; páginas institucionais não simulam pagamentos ou usuários.",
+      "Publicação de Arquivo das Cinco Luzes, obra-vitrine original com cinco capítulos e capa própria para validar a jornada completa.",
+    ],
+    nextStep: "Executar testes de jornada, acessibilidade e responsividade com pessoas reais antes de considerar moderação, recuperação de senha ou pagamentos.",
+    icon: "📚",
+    current: true,
+  },
+  {
     id: "2026-07-portfolio-hub",
     period: "26 de julho de 2026",
     dateTime: "2026-07-26",
@@ -28,7 +46,6 @@ export const devlogEntries: DevlogEntry[] = [
     ],
     nextStep: "Implementar autenticação e publicação de histórias no Universo de Histórias.",
     icon: "🧭",
-    current: true,
   },
   {
     id: "2025-12-deploy",
