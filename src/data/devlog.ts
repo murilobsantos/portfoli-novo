@@ -24,6 +24,7 @@ export const devlogEntries: DevlogEntry[] = [
       "Auditoria confirmou cinco salas, afinidades, ecos, combate, habilidades, ruptura e finais já presentes no protótipo.",
       "Correções iniciais restauraram o estado de sala, a transição da introdução para o mundo e a interação de absorver/destruir ecos pelo teclado.",
       "A primeira direção de arte substituiu o grid cru por ruínas ilustradas, HUD de essência/vigor, entidades luminosas e telas narrativas próprias.",
+      "Partículas e efeitos de impacto agora respondem a ecos, dano, ataque, dom e ruptura; a vitrine do portfólio foi alinhada ao protótipo real.",
       "Servidor local e verificações de sintaxe passaram; o projeto recebeu Git, README e checklist de teste manual.",
     ],
     nextStep: "Testar a travessia completa até o Santuário, corrigir feedback de combate e balancear o loop para uma sessão de 10 a 15 minutos.",
