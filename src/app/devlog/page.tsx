@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from "next/link";
+import { DevlogClock } from "@/components/DevlogClock";
 
 export default function DevlogPage() {
   return (
@@ -15,9 +16,35 @@ export default function DevlogPage() {
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Registros diários da minha evolução técnica. Técnicas aprendidas, desafios superados e insights conquistados.
           </p>
+          <DevlogClock />
+          <p className="mt-2 text-sm text-gray-400">Cada entrega relevante recebe uma entrada com data editorial e próximo passo.</p>
         </header>
 
         <main className="space-y-8">
+          <article className="wuxia-border wuxia-glow rounded-lg p-8 bg-black/50">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="text-3xl">🧭</div>
+              <div>
+                <h3 className="text-2xl font-bold text-yellow-400">Atualização: vitrine GitHub e reorganização dos projetos</h3>
+                <time className="text-gray-400" dateTime="2026-07-26">26 de julho de 2026</time>
+              </div>
+            </div>
+            <div className="prose prose-lg prose-invert max-w-none">
+              <p className="text-gray-300 leading-relaxed mb-4">
+                O portfólio passou a listar automaticamente os repositórios públicos do GitHub e ganhou destaques atualizados
+                para Eclipse System Recovery, Universo de Histórias e Echoes of Divinity.
+              </p>
+              <h4 className="text-xl font-bold text-red-400 mb-2">Entregas</h4>
+              <ul className="text-gray-300 space-y-2 mb-4">
+                <li>• Página própria do Eclipse System Recovery, com a URL empresarial antiga redirecionada.</li>
+                <li>• Limpeza estrutural do Universo de Histórias e contrato do MVP de backend.</li>
+                <li>• Política de atualização do devlog e relógio local em tempo real.</li>
+              </ul>
+              <h4 className="text-xl font-bold text-red-400 mb-2">Próximo passo</h4>
+              <p className="text-gray-300">Implementar autenticação e leitura/publicação de histórias no backend do Universo.</p>
+            </div>
+          </article>
+
           {/* Latest Devlog Entry */}
           <article className="wuxia-border wuxia-glow rounded-lg p-8 bg-black/50">
             <div className="flex items-center gap-4 mb-6">

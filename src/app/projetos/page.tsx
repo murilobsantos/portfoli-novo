@@ -7,7 +7,7 @@ const featuredProjects = [
     description:
       "Ferramenta Windows de diagnóstico, manutenção e relatórios com interface gráfica, backups e perfis de limpeza segura.",
     tech: ["PowerShell", "WPF", "Windows"],
-    link: "/demos/sistema-de-gestao-empresarial",
+    link: "/demos/eclipse-system-recovery",
     status: "Versão 1.0",
     icon: "🛠️",
   },

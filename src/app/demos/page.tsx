@@ -28,27 +28,26 @@ export default function DemosPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Link
-                href="/demos/sistema-de-gestao-empresarial"
+                href="/demos/eclipse-system-recovery"
                 className="group block wuxia-border wuxia-glow rounded-lg p-6 bg-black/30 hover:bg-black/50 transition-all duration-300 transform hover:scale-105"
               >
-                <div className="text-4xl mb-4">🏢</div>
-                <h4 className="text-xl font-bold mb-3 text-blue-400 group-hover:text-blue-300 transition-colors">
-                  Sistema de Gestão Empresarial
+                <div className="text-4xl mb-4">🛠️</div>
+                <h4 className="text-xl font-bold mb-3 text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                  Eclipse System Recovery
                 </h4>
                 <p className="text-gray-300 text-sm mb-4">
-                  Plataforma completa para gestão empresarial com dashboards, RH, financeiro e relatórios.
+                  Aplicativo Windows para diagnóstico, manutenção, limpeza segura e relatórios técnicos.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded">React</span>
-                  <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded">TypeScript</span>
-                  <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded">Next.js</span>
-                  <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded">PostgreSQL</span>
+                  <span className="px-2 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded">PowerShell</span>
+                  <span className="px-2 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded">WPF</span>
+                  <span className="px-2 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded">Windows</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-purple-400 text-sm group-hover:translate-x-1 transition-transform">
                     Explorar Demo →
                   </span>
-                  <span className="text-yellow-400 text-xs">Demonstração</span>
+                  <span className="text-yellow-400 text-xs">Versão 1.0</span>
                 </div>
               </Link>
 
