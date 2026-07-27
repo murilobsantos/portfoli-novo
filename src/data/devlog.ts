@@ -27,6 +27,7 @@ export const devlogEntries: DevlogEntry[] = [
       "O Viajante do Eco e o Guardião agora usam sprites humanoides originais; os ecos luminosos ficaram restritos ao papel de fragmentos coletáveis do mundo.",
       "A apresentação foi reconstruída como mapa RPG top-down: câmara pixelada, piso contínuo, ruínas e obstáculos, com a malha reduzida à colisão invisível em vez de labirinto visível.",
       "O avatar estático foi substituído por um spritesheet autoral: estados de idle, caminhada, ataque, salto e dano usam matriz de frames, espelhamento, hit-flash e squash & stretch.",
+      "Uma pipeline local do Retro Diffusion passou a checar disponibilidade e custo antes de gerar arte em uma área de revisão, sem credenciais ou assets automáticos no Git.",
       "Partículas e efeitos de impacto agora respondem a ecos, dano, ataque, dom e ruptura; a vitrine do portfólio foi alinhada ao protótipo real.",
       "Servidor local e verificações de sintaxe passaram; o projeto recebeu Git, README e checklist de teste manual.",
     ],
