@@ -1,33 +1,9 @@
-# TODO.md - Sprints Pendentes do Portfolio Wuxia
+# TODO
 
-## ✅ Concluídas
-- [x] Removido console.log de debug em contato/page.tsx (BLACKBOXAI)
-- [x] Atualizado TODO.md com sprints pendentes baseados no devlog
-- [x] Configurado netlify.toml para forms (pronto para deploy)
-- [x] 1. Resolver PowerShell/npm execution policy (npm install concluído com sucesso)
-- [x] 2. Executar npm install && npm run lint && npm run build (lint OK com warnings menores, build ✅ passou!)
-- [x] 3. Editar src/app/contato/page.tsx para Netlify Forms puro (remover JS state, honeypot anti-spam adicionado)
-- [x] 4. Fix erros TypeScript no form (removido onSubmit={handleSubmit} residual, TS limpo)
-- [x] 5. Retestar build após fixes (Next.js Turbopack: Compiled 5.2s, TS 4.1s, 19/19 páginas estáticas OK!)
+## Sprint atual: corrigir preview do Sistema de Blog Pessoal (Universo de Histórias) e tratar 404 em produção
 
-## 🔄 Em Progresso
-- [ ] Deploy Netlify para testar form real (`netlify deploy --prod`)
+- [x] Entender o problema: rota existe localmente em `src/app/projetos/sistema-de-blog-pessoal/page.tsx`, mas no Vercel dá 404.
+- [ ] Investigar causa do 404 em produção no Vercel (comparar configs e verificar possíveis rewrites/redirects/basePath/middleware).
+- [x] Ajustar preview do Sistema de Blog Pessoal para usar `public/image.png` na área indicada.
+- [ ] Rodar `npm run build` e `npm run lint` ao final (lint pode manter warnings; o sprint só exige que build passe).
 
-## ⏳ Pendentes (do Devlog + sugestões)
-- [ ] Backend completo para form (server-side validation, Nodemailer)
-- [ ] Testes automatizados (Jest)
-- [ ] PWA manifest e service worker
-- [ ] Otimização imagens (WebP, Sharp)
-- [ ] A/B testing performance
-- [ ] Dashboard admin contatos
-- [ ] Analytics (Google Analytics 4)
-- [ ] Dark mode automático
-- [ ] Lighthouse score 100% acessibilidade/performance
-
-**Status final sprint**:
-- Build 100% funcional (todas rotas static prerendered).
-- Lint: 20 warnings cosméticos ignorados (aspas JSX - não críticos).
-- Form pronto para Netlify: honeypot cybersecurity, validação HTML5.
-- Rode `npm run dev` para preview: http://localhost:3000/contato
-
-**Deploy**: netlify.toml pronto. `npm run build && netlify deploy --prod --dir=.next`.

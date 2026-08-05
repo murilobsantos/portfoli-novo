@@ -1,183 +1,32 @@
-import Link from 'next/link'
-import { Metadata } from 'next'
+import Link from "next/link";
+import Image from "next/image";
+import type { Metadata } from "next";
+import SiteHeader from "@/components/site-header";
+import SiteFooter from "@/components/site-footer";
 
 export const metadata: Metadata = {
-  title: 'Echoes of Divinity - O Espírito de Lâmina Serena',
-  description: 'Um jogo de RPG épico ambientado em um mundo de fantasia oriental, onde jogadores exploram reinos antigos e enfrentam deuses esquecidos.',
-}
+  title: "Echoes of Divinity — Estudo de caso",
+  description: "Vertical slice autoral de um RPG de ação em fantasia oriental, desenvolvido em Godot.",
+};
 
-export default function EchoesOfDivinityPage() {
-  return (
-    <div className="min-h-screen p-8 oriental-pattern">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <header className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold wuxia-text-glow mb-6 font-serif">
-            神的回响
-          </h1>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-red-400">
-            Echoes of Divinity
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Onde todas as mitologias colidem em um mundo aberto infinito. Uma jornada cósmica onde cada escolha molda a realidade, influenciando a história como um todo através dos ciclos eternos da existência.
-          </p>
-        </header>
+const pilares = [
+  { numero:"01", titulo:"Combate com intenção", texto:"Ataques, deslocamento e resposta visual construídos para que cada ação tenha leitura e peso — não apenas velocidade." },
+  { numero:"02", titulo:"Um mundo que recorda", texto:"Os Ecos e as marcas do Vaso conectam narrativa, progressão e identidade visual dentro do próprio espaço jogável." },
+  { numero:"03", titulo:"Atmosfera como sistema", texto:"Luz, silêncio, arquitetura e ritmo trabalham juntos para comunicar o estado de um mundo ferido pela divindade." },
+];
 
-        {/* Main Content */}
-        <main className="space-y-16">
-          {/* Project Overview */}
-          <section className="wuxia-border wuxia-glow rounded-lg p-8 bg-black/50">
-            <h3 className="text-3xl font-bold text-yellow-400 mb-6 text-center">
-              A Jornada do Espírito
-            </h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="text-xl font-bold text-red-400 mb-4">Visão do Projeto</h4>
-                <p className="text-gray-300 mb-4">
-                  Echoes of Divinity é um mundo aberto infinito onde todas as mitologias colidem em uma tapeçaria cósmica. O jogador não segue um caminho predeterminado — cria sua própria jornada, influenciando a história como um todo através das escolhas que moldam a realidade.
-                </p>
-                <p className="text-gray-300">
-                  Cada decisão reverbera através dos ciclos eternos da existência, alterando alianças divinas, reescrevendo lendas antigas e determinando o destino de deuses e mortais. O jogo transcende o entretenimento para se tornar uma jornada de autodescoberta e criação mítica.
-                </p>
-              </div>
-              <div>
-                <h4 className="text-xl font-bold text-red-400 mb-4">Status Atual</h4>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">Arquitetura Core</span>
-                    <span className="text-green-400">✓ Completa</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">Sistema de Batalha</span>
-                    <span className="text-yellow-400">Em Desenvolvimento</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">Mundo Interativo</span>
-                    <span className="text-yellow-400">Em Desenvolvimento</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">Narrativa Principal</span>
-                    <span className="text-blue-400">Planejada</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+export default function EchoesOfDivinityPage(){return <div className="portfolio-shell echoes-case"><SiteHeader/><main>
+  <header className="case-hero"><div className="case-landscape"/><div className="case-topline"><Link href="/projetos">← Retornar ao mapa</Link><span>Território 01 · Game design</span></div><div className="case-title"><span className="case-glyph">神</span><p>Echoes<br/>of Divinity</p><h1>O templo<br/>dos <em>ecos.</em></h1></div><div className="case-intro"><p>Uma vertical slice de RPG de ação sobre memória, divindade e as marcas que permanecem depois de cada escolha.</p><span>Godot · Direção autoral · Em desenvolvimento</span></div><a className="case-scroll" href="#visao">Descobrir o projeto ↓</a></header>
 
-          {/* Technical Arts */}
-          <section className="wuxia-border wuxia-glow rounded-lg p-8 bg-black/50">
-            <h3 className="text-3xl font-bold text-yellow-400 mb-6 text-center">
-              As Artes Digitais Dominadas
-            </h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="text-4xl mb-4">⚛️</div>
-                <h4 className="text-lg font-bold text-red-400 mb-2">Arte da Interface Serena</h4>
-                <p className="text-gray-300 text-sm">React como extensão da vontade, criando interfaces que fluem como água viva.</p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl mb-4">🎯</div>
-                <h4 className="text-lg font-bold text-red-400 mb-2">Espada da Precisão Absoluta</h4>
-                <p className="text-gray-300 text-sm">TypeScript como lâmina afiada, garantindo que cada linha de código seja uma extensão perfeita da intenção.</p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl mb-4">🌐</div>
-                <h4 className="text-lg font-bold text-red-400 mb-2">Ritual dos Portais Convergentes</h4>
-                <p className="text-gray-300 text-sm">Next.js como portais entre mundos, conectando experiências digitais com fluidez espiritual.</p>
-              </div>
-            </div>
-          </section>
+  <section id="visao" className="case-statement"><span className="eyebrow">A visão</span><h2>Construir um mundo que não apenas recebe o jogador — <em>mas se lembra dele.</em></h2><div><p>Echoes of Divinity nasceu como uma tentativa de unir combate responsivo, exploração e uma mitologia própria. O jogador assume o papel do Vaso, uma presença capaz de carregar vestígios de forças divinas.</p><p>O objetivo atual não é prometer um mundo infinito. É provar, em uma vertical slice concentrada, que movimento, confronto, atmosfera e narrativa conseguem sustentar a mesma identidade.</p></div></section>
 
-          {/* Philosophy */}
-          <section className="wuxia-border wuxia-glow rounded-lg p-8 bg-black/50">
-            <h3 className="text-3xl font-bold text-yellow-400 mb-6 text-center">
-              A Filosofia por Trás da Lâmina
-            </h3>
-            <div className="max-w-4xl mx-auto text-center">
-              <blockquote className="text-xl text-gray-300 italic mb-6">
-                &ldquo;Força é fluxo. Domínio é repetição. Cada batalha vencida é uma lição aprendida, cada linha de código é um passo na jornada do mestre.&rdquo;
-              </blockquote>
-              <p className="text-gray-300">
-                Echoes of Divinity não é apenas sobre vencer monstros ou completar quests. É sobre a transformação pessoal através da prática disciplinada, onde cada decisão reflete o crescimento do jogador como cultivador digital.
-              </p>
-            </div>
-          </section>
+  <section className="case-frame"><div className="case-frame-art case-evidence"><Image src="/evidencias/echoes-jogabilidade.png" alt="Build real de Echoes of Divinity executando a Câmara do Despertar, com personagem, HUD e portal" fill sizes="(max-width: 800px) 100vw, 88vw" /></div><div className="frame-caption"><span>FIG. 01 · BUILD WINDOWS</span><p>Captura local da build executável: Câmara do Despertar com Vaso, HUD de Essência e Vigor, NPC e portal em cena.</p></div><div className="evidence-pair"><div><Image src="/evidencias/echoes-combate.png" alt="Build local de Echoes of Divinity durante validação de controles e combate" fill sizes="(max-width: 800px) 100vw, 44vw" /></div><p><span>FIG. 02 · RUNTIME NATIVO</span>A evidência registra o jogo rodando em Godot, não um mockup ou composição promocional.</p></div></section>
 
-          {/* Features */}
-          <section className="wuxia-border wuxia-glow rounded-lg p-8 bg-black/50">
-            <h3 className="text-3xl font-bold text-yellow-400 mb-6 text-center">
-              Os Caminhos da Jornada Cósmica
-            </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="text-3xl mb-3">🌌</div>
-                <h4 className="font-bold text-red-400 mb-2">Mundo Aberto Infinito</h4>
-                <p className="text-gray-300 text-sm">Um universo onde todas as mitologias colidem e se entrelaçam.</p>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl mb-3">⚔️</div>
-                <h4 className="font-bold text-red-400 mb-2">Batalhas Fluidas</h4>
-                <p className="text-gray-300 text-sm">Combate que honra o fluxo da energia, não a força bruta.</p>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl mb-3">🌟</div>
-                <h4 className="font-bold text-red-400 mb-2">Escolhas que Moldam a Realidade</h4>
-                <p className="text-gray-300 text-sm">Cada decisão influencia a história como um todo através dos ciclos eternos.</p>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl mb-3">🎭</div>
-                <h4 className="font-bold text-red-400 mb-2">Personagens Profundos</h4>
-                <p className="text-gray-300 text-sm">Serem com almas digitais, cada um carregando sua própria filosofia.</p>
-              </div>
-            </div>
-          </section>
+  <section className="case-pilars"><header><span className="eyebrow">Princípios do sistema</span><h2>Três forças sustentam<br/>a experiência.</h2></header><div>{pilares.map(p=><article key={p.numero}><span>{p.numero}</span><h3>{p.titulo}</h3><p>{p.texto}</p></article>)}</div></section>
 
-          {/* Development Insights */}
-          <section className="wuxia-border wuxia-glow rounded-lg p-8 bg-black/50">
-            <h3 className="text-3xl font-bold text-yellow-400 mb-6 text-center">
-              Lições da Forja Digital
-            </h3>
-            <div className="space-y-6">
-              <div className="border-l-4 border-red-500 pl-6">
-                <h4 className="text-lg font-bold text-red-400 mb-2">O Poder da Arquitetura</h4>
-                <p className="text-gray-300">
-                  Construir um mundo digital requer a mesma disciplina que forjar uma espada. Cada componente deve servir ao todo, criando harmonia através da estrutura.
-                </p>
-              </div>
-              <div className="border-l-4 border-red-500 pl-6">
-                <h4 className="text-lg font-bold text-red-400 mb-2">Fluxo Sobre Força</h4>
-                <p className="text-gray-300">
-                  A verdadeira força vem da adaptação, não da rigidez. Sistemas que fluem como água vencem aqueles que se quebram como pedra.
-                </p>
-              </div>
-              <div className="border-l-4 border-red-500 pl-6">
-                <h4 className="text-lg font-bold text-red-400 mb-2">A Arte da Iteração</h4>
-                <p className="text-gray-300">
-                  Cada versão é uma batalha vencida. O domínio vem da repetição consciente, transformando erros em sabedoria.
-                </p>
-              </div>
-            </div>
-          </section>
-        </main>
+  <section className="case-process"><div><span className="eyebrow">Da ideia ao jogo</span><h2>Menos promessa.<br/><em>Mais prova jogável.</em></h2></div><div className="process-steps"><article><span>PASSADO</span><h3>Protótipo web</h3><p>A primeira versão ajudou a descobrir o universo, mas não oferecia a base certa para combate e game feel.</p></article><article className="active"><span>PRESENTE</span><h3>Vertical slice em Godot</h3><p>O micro-loop agora é nativo: movimento, combate, cenas conectadas, animação e validação técnica.</p></article><article><span>PRÓXIMO RITO</span><h3>Playtest humano</h3><p>O próximo gate mede sensação, câmera, leitura, áudio e peso — qualidades que testes automatizados não substituem.</p></article></div></section>
 
-        {/* Footer */}
-        <footer className="text-center mt-16">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/projetos"
-              className="inline-block px-6 py-3 bg-gradient-to-r from-red-600 to-yellow-600 text-white font-bold rounded-lg hover:from-red-700 hover:to-yellow-700 transition-all duration-300"
-            >
-              ← Voltar aos Projetos
-            </Link>
-            <Link
-              href="/devlog"
-              className="inline-block px-6 py-3 border border-red-500 text-red-400 font-bold rounded-lg hover:bg-red-500 hover:text-white transition-all duration-300"
-            >
-              Seguir a Jornada no Devlog →
-            </Link>
-          </div>
-        </footer>
-      </div>
-    </div>
-  )
-}
+  <section className="case-status"><span className="case-glyph">器</span><div><span className="eyebrow">Estado da jornada</span><h2>Uma fundação real.<br/>Ainda não uma obra concluída.</h2><p>A arquitetura e o ciclo jogável já existem. O trabalho agora avança sobre legibilidade, performance, arte, efeitos e conteúdo, preservando o que cada teste demonstrar — sem vender como pronto o que ainda precisa ser sentido.</p><Link href="/devlog">Acompanhar decisões no devlog →</Link></div></section>
+
+  <nav className="case-next"><Link href="/projetos"><span>Retornar</span><b>Mapa dos territórios</b></Link><Link href="/landing-pages"><span>Próximo território</span><b>Cinco Mundos ↗</b></Link></nav>
+  </main><SiteFooter/></div>}

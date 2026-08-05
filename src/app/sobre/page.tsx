@@ -23,7 +23,7 @@ export default function SobrePage() {
             Murilo Santos — Tecelão de Interfaces
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto italic">
-            "O código deve ser como água — fluido, adaptável, cortando o caos com elegância."
+            &ldquo;O código deve ser como água — fluido, adaptável, cortando o caos com elegância.&rdquo;
           </p>
         </header>
 
@@ -43,7 +43,7 @@ export default function SobrePage() {
                 Cada projeto é uma batalha vencida, cada bug derrotado é uma lição aprendida.
               </p>
               <blockquote className="text-lg text-gray-400 italic border-l-4 border-red-500 pl-6">
-                "Força vem da repetição consciente. Domínio vem da adaptação constante."
+                &ldquo;Força vem da repetição consciente. Domínio vem da adaptação constante.&rdquo;
               </blockquote>
             </div>
           </section>
@@ -124,7 +124,7 @@ export default function SobrePage() {
             </h3>
             <div className="max-w-4xl mx-auto text-center">
               <blockquote className="text-xl text-gray-300 italic mb-6">
-                "O verdadeiro mestre não busca a perfeição imediata, mas o crescimento constante através da prática disciplinada."
+                &ldquo;O verdadeiro mestre não busca a perfeição imediata, mas o crescimento constante através da prática disciplinada.&rdquo;
               </blockquote>
               <p className="text-gray-300">
                 Cada linha de código é uma oportunidade de crescimento. Cada projeto é uma batalha que fortalece o espírito.
