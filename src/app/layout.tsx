@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { Anton, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const anton = Anton({
@@ -30,6 +31,7 @@ export default function RootLayout({
         className={`${anton.variable} ${inter.variable} antialiased bg-black text-white min-h-screen overflow-x-hidden`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
