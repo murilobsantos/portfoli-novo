@@ -1,6 +1,6 @@
 # Portfólio Wuxia — Murilo Santos
 
-Portfólio pessoal com identidade visual inspirada em wuxia, criado para apresentar projetos, trajetória e processo de desenvolvimento de Murilo Santos.
+Portfólio pessoal com identidade visual inspirada em wuxia, criado para apresentar projetos, trajetória e o meu processo de desenvolvimento.
 
 ## Experiência
 
