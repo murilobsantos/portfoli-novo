@@ -1,34 +1,33 @@
 # Portfólio Wuxia — Murilo Santos
 
-Portfólio pessoal com identidade visual inspirada em wuxia, criado para apresentar projetos, trajetória e o meu processo de desenvolvimento.
+Portfólio pessoal para apresentar meu trabalho em desenvolvimento front-end, produtos autorais e experiências interativas. A direção visual inspirada em wuxia organiza projetos, devlog e contato em uma experiência com identidade própria.
 
-## Experiência
+[**Visitar o portfólio**](https://portfoli-novo.vercel.app)
 
-- Página inicial autoral com direção visual própria
-- Catálogo de projetos
-- Devlog
-- Página de contato
-- Layout responsivo
+## Destaques
+
+- Catálogo de projetos com contexto, tecnologias e links verificáveis
+- Estudos de interface e landing pages responsivas
+- Devlog com decisões e evolução do trabalho
+- Layout adaptado para dispositivos móveis
+
+## Captura
+
+![Página inicial do Portfólio Wuxia](docs/screenshots/portfolio-atual.png)
 
 ## Tecnologias
 
-- Next.js 16
-- React 19
-- TypeScript
-- Tailwind CSS
+`Next.js` · `React` · `TypeScript` · `Tailwind CSS`
 
 ## Executar localmente
 
-    npm install
-    npm run dev
+```bash
+npm install
+npm run dev
+```
 
-Acesse http://localhost:3000.
+Acesse `http://localhost:3000`.
 
-## Scripts
+## Status
 
-    npm run dev
-    npm run build
-    npm run start
-    npm run lint
-
-Projeto de portfólio em evolução.
+Em evolução contínua. O site publicado é a referência da versão em produção.
