@@ -1,0 +1,17 @@
+/* Local styles for Universo de Histórias showcase */
+.figureCaption {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: 8px;
+  color: #58635d;
+  margin-bottom: 8px;
+}
+
+.figureNote {
+  color: inherit;
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 780px;
+  margin: 0;
+}

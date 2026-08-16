@@ -32,6 +32,19 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+*.pfx
+*.p12
+*.key
+id_rsa
+id_ed25519
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
 
 # vercel
 .vercel
@@ -39,25 +52,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# Regras de segurança e arquivos locais
-.env
-.env.*
-!.env.example
-**/.env
-**/.env.*
-!**/.env.example
-*.pfx
-*.p12
-*.pem
-*.key
-id_rsa
-id_ed25519
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
-Desktop.ini
 
 # Local Netlify folder
 .netlify

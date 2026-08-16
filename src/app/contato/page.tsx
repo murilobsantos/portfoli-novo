@@ -1,166 +1,42 @@
-'use client';
-
-import { useState } from 'react';
-import Link from 'next/link';
+import Link from "next/link";
+import SiteHeader from "@/components/site-header";
+import SiteFooter from "@/components/site-footer";
+import styles from "./styles.module.css";
 
 export default function ContatoPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+  return <div className={styles.page}><SiteHeader />
+    <main>
+      <section className={styles.hero}>
+        <div className={styles.glyph} aria-hidden="true">會</div>
+        <div className={styles.heroTop}><span>CAPÍTULO IV · O ENCONTRO</span><span>BRASIL · REMOTO</span></div>
+        <div><span className="eyebrow">會 · Pavilhão de encontro</span><h1>Todo projeto começa<br />com uma <em>conversa.</em></h1></div>
+        <p>Conte o que você quer construir, transformar ou descobrir. Eu retorno com perguntas claras e um próximo passo possível.</p>
+        <a href="#mensagem">Deixar uma mensagem <b>↓</b></a>
+      </section>
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+      <section className={styles.contact} id="mensagem">
+        <aside>
+          <span className="eyebrow">Canal direto</span>
+          <h2>Sem formulários<br />de fumaça.</h2>
+          <p>Você fala diretamente comigo. Em dias úteis, a resposta costuma chegar em até 24 horas.</p>
+          <dl><div><dt>Disponibilidade</dt><dd>Projetos e colaborações selecionadas</dd></div><div><dt>Fuso horário</dt><dd>Brasília · UTC−3</dd></div><div><dt>Preferência</dt><dd>Briefing objetivo, desafio real e diálogo aberto</dd></div></dl>
+        </aside>
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Mensagem enviada! Entrarei em contato em breve.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
-  };
+        <form className={styles.form} action="/api/contato" method="POST">
+          <div className={styles.formHeading}><span>FORMULÁRIO 01</span><p>Os campos marcados são necessários.</p></div>
+          <div className={styles.row}><label><span>01 · Seu nome *</span><input id="name" name="name" required autoComplete="name" placeholder="Como devo chamar você?" /></label><label><span>02 · Seu e-mail *</span><input id="email" name="email" type="email" required autoComplete="email" placeholder="voce@exemplo.com" /></label></div>
+          <label><span>03 · Assunto *</span><input id="subject" name="subject" required placeholder="Produto, colaboração, oportunidade..." /></label>
+          <label><span>04 · A ideia *</span><textarea id="message" name="message" required placeholder="Contexto, objetivo e o que você espera desta conversa." /></label>
+          <div className={styles.submit}><p>Ao enviar, sua mensagem segue apenas para contato profissional.</p><button type="submit">Enviar mensagem <b>↗</b></button></div>
+        </form>
+      </section>
 
-  return (
-    <div className="min-h-screen wuxia-bg smoke-effect">
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          {/* Header */}
-          <header className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold wuxia-text-glow mb-6 font-serif">
-              聯絡
-            </h1>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-red-400">
-              Contato - O Portal das Mensagens
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Que sua mensagem atravesse os véus digitais como uma flecha certeira.
-              Compartilhe suas ideias e juntos forjaremos algo extraordinário.
-            </p>
-          </header>
+      <section className={styles.protocol}>
+        <header><span className="eyebrow">O que acontece depois</span><h2>Um processo simples,<br /><em>sem ruído.</em></h2></header>
+        <div><article><span>01</span><h3>Leitura</h3><p>Entendo o contexto, o objetivo e se posso realmente contribuir.</p></article><article><span>02</span><h3>Alinhamento</h3><p>Retorno com perguntas, restrições e uma direção inicial honesta.</p></article><article><span>03</span><h3>Próximo passo</h3><p>Se houver encaixe, definimos escopo, prazo e forma de colaboração.</p></article></div>
+      </section>
 
-          {/* Contact Form */}
-          <div className="wuxia-border wuxia-glow rounded-lg p-8 bg-black/50 max-w-2xl mx-auto">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-bold text-red-400 mb-2">
-                    Nome *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-gray-800 border border-red-500/30 rounded-lg text-white placeholder-gray-400 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 transition-colors"
-                    placeholder="Seu nome completo"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-bold text-red-400 mb-2">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-gray-800 border border-red-500/30 rounded-lg text-white placeholder-gray-400 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 transition-colors"
-                    placeholder="seu.email@exemplo.com"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-sm font-bold text-red-400 mb-2">
-                  Assunto *
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-gray-800 border border-red-500/30 rounded-lg text-white placeholder-gray-400 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 transition-colors"
-                  placeholder="Sobre o que deseja falar?"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-bold text-red-400 mb-2">
-                  Mensagem *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={6}
-                  className="w-full px-4 py-3 bg-gray-800 border border-red-500/30 rounded-lg text-white placeholder-gray-400 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 transition-colors resize-none"
-                  placeholder="Conte-me sobre seu projeto, ideia ou pergunta..."
-                />
-              </div>
-
-              <div className="text-center">
-                <button
-                  type="submit"
-                  className="px-8 py-4 bg-gradient-to-r from-red-600 to-red-800 text-white font-bold text-lg rounded-lg wuxia-glow-hover wuxia-border transform hover:scale-105 transition-all duration-300"
-                >
-                  <span className="flex items-center justify-center gap-2">
-                    📨 Enviar Mensagem
-                  </span>
-                </button>
-              </div>
-            </form>
-          </div>
-
-          {/* Additional Contact Info */}
-          <div className="mt-16 grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-lg font-bold text-red-400 mb-2">Resposta Rápida</h3>
-              <p className="text-gray-300 text-sm">
-                Respondo todas as mensagens em até 24 horas durante dias úteis.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-lg font-bold text-red-400 mb-2">Projetos Personalizados</h3>
-              <p className="text-gray-300 text-sm">
-                Interessado em colaborações? Vamos discutir seu projeto em detalhes.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">🔮</div>
-              <h3 className="text-lg font-bold text-red-400 mb-2">Consultorias</h3>
-              <p className="text-gray-300 text-sm">
-                Precisa de orientação técnica? Ofereço consultorias especializadas.
-              </p>
-            </div>
-          </div>
-
-          {/* Back to Home */}
-          <div className="text-center mt-16">
-            <Link
-              href="/"
-              className="inline-block px-6 py-3 border-2 border-red-500 text-red-400 font-bold rounded-lg hover:bg-red-500 hover:text-black transition-all duration-300"
-            >
-              ← Voltar ao Início
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+      <nav className={styles.next}><Link href="/projetos"><span>Explorar antes de conversar</span><b>Ver projetos ↗</b></Link><Link href="/sobre"><span>Conhecer quem está do outro lado</span><b>Sobre Murilo ↗</b></Link></nav>
+    </main><SiteFooter />
+  </div>;
 }

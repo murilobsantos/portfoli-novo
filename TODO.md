@@ -1,7 +1,9 @@
-- [x] Update devlog with latest features/achievements (contact page, home page updates, responsive design, image integration)
-- [x] Include notes on potential bugs (non-functional contact form, performance issues with images, responsive design edge cases)
-- [x] Verify the devlog update is correctly formatted and displays properly
-- [x] Add new devlog entries for performance monitoring tools, backend for contact form, and advanced image optimization
-- [x] Fix ESLint errors for unescaped quotes in JSX content
-- [x] Fix broken link for "Echoes of Divinity" project (404 error resolved by correcting href paths)
-- [x] Fix non-clickable interactive components in Echoes of Divinity demo (added type="button" and cursor-pointer to all buttons)
+# TODO
+
+## Sprint atual: corrigir preview do Sistema de Blog Pessoal (Universo de Histórias) e tratar 404 em produção
+
+- [x] Entender o problema: rota existe localmente em `src/app/projetos/sistema-de-blog-pessoal/page.tsx`, mas no Vercel dá 404.
+- [ ] Investigar causa do 404 em produção no Vercel (comparar configs e verificar possíveis rewrites/redirects/basePath/middleware).
+- [x] Ajustar preview do Sistema de Blog Pessoal para usar `public/image.png` na área indicada.
+- [ ] Rodar `npm run build` e `npm run lint` ao final (lint pode manter warnings; o sprint só exige que build passe).
+

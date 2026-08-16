@@ -1,198 +1,23 @@
-import Link from 'next/link'
-import { Metadata } from 'next'
+import Link from "next/link";
+import Image from "next/image";
+import type { Metadata } from "next";
+import SiteHeader from "@/components/site-header";
+import SiteFooter from "@/components/site-footer";
+import styles from "./styles.module.css";
 
-export const metadata: Metadata = {
-  title: 'Universo de Histórias - A Tapeçaria Viva das Narrativas',
-  description: 'Uma plataforma interativa para criação e compartilhamento de histórias colaborativas.',
-}
+export const metadata: Metadata = { title:"Universo de Histórias — Estudo de caso", description:"Plataforma funcional para leitura, publicação e descoberta de histórias." };
 
-export default function UniversoDeHistoriasPage() {
-  return (
-    <div className="min-h-screen p-8 oriental-pattern">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <header className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold wuxia-text-glow mb-6 font-serif">
-            故事宇宙
-          </h1>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-green-400">
-            Universo de Histórias
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Onde cada voz encontra seu lugar na grande tapeçaria da narrativa humana. Uma plataforma viva onde
-            histórias nascem, crescem e se entrelaçam em harmonia infinita.
-          </p>
-        </header>
+const fundamentos=[
+  ["01","Publicar sem fricção","Uma jornada clara para transformar rascunhos em histórias acessíveis, sem exigir conhecimento técnico do autor."],
+  ["02","Persistir de verdade","Conteúdo e operações apoiados por backend persistente — não por demonstrações descartáveis ou dados simulados."],
+  ["03","Evoluir com pessoas","O produto alcançou a base funcional. A próxima etapa nasce do comportamento e das necessidades de usuários reais."],
+];
 
-        {/* Main Content */}
-        <main className="space-y-16">
-          {/* Project Overview */}
-          <section className="wuxia-border wuxia-glow rounded-lg p-8 bg-black/50">
-            <h3 className="text-3xl font-bold text-green-400 mb-6 text-center">
-              A Tapeçaria Viva das Narrativas
-            </h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="text-xl font-bold text-green-400 mb-4">Visão do Projeto</h4>
-                <p className="text-gray-300 mb-4">
-                  Universo de Histórias transcende o conceito de plataforma — é um ecossistema vivo onde narrativas
-                  respiram e evoluem. Cada história não é estática, mas um organismo digital que cresce através da
-                  colaboração e imaginação coletiva.
-                </p>
-                <p className="text-gray-300">
-                  Aqui, escritores não apenas criam, mas cultivam mundos. Leitores não apenas consomem, mas participam
-                  ativamente da evolução das histórias que amam.
-                </p>
-              </div>
-              <div>
-                <h4 className="text-xl font-bold text-green-400 mb-4">Status Atual</h4>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">Sistema de Colaboração</span>
-                    <span className="text-green-400">✓ Completo</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">Interface de Criação</span>
-                    <span className="text-yellow-400">Em Desenvolvimento</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">Comunidade Interativa</span>
-                    <span className="text-blue-400">Planejada</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Technical Arts */}
-          <section className="wuxia-border wuxia-glow rounded-lg p-8 bg-black/50">
-            <h3 className="text-3xl font-bold text-green-400 mb-6 text-center">
-              As Artes da Criação Coletiva
-            </h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="text-4xl mb-4">🌱</div>
-                <h4 className="text-lg font-bold text-green-400 mb-2">Semente da Colaboração</h4>
-                <p className="text-gray-300 text-sm">Next.js como solo fértil, nutrindo o crescimento orgânico das narrativas compartilhadas.</p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl mb-4">📝</div>
-                <h4 className="text-lg font-bold text-green-400 mb-2">Pincel da Expressão</h4>
-                <p className="text-gray-300 text-sm">TypeScript como pincel preciso, garantindo que cada palavra seja colocada com intenção perfeita.</p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl mb-4">🌐</div>
-                <h4 className="text-lg font-bold text-green-400 mb-2">Teia da Conexão</h4>
-                <p className="text-gray-300 text-sm">React como teia viva, conectando criadores e leitores em uma rede de significado compartilhado.</p>
-              </div>
-            </div>
-          </section>
-
-          {/* Philosophy */}
-          <section className="wuxia-border wuxia-glow rounded-lg p-8 bg-black/50">
-            <h3 className="text-3xl font-bold text-green-400 mb-6 text-center">
-              A Filosofia da Criação Compartilhada
-            </h3>
-            <div className="max-w-4xl mx-auto text-center">
-              <blockquote className="text-xl text-gray-300 italic mb-6">
-                &ldquo;Histórias não pertencem a indivíduos — elas pertencem à humanidade. Cada voz adiciona cor à
-                tapeçaria, cada colaboração enriquece o tecido da imaginação coletiva.&rdquo;
-              </blockquote>
-              <p className="text-gray-300">
-                Universo de Histórias não é sobre posse, mas sobre compartilhamento. É um jardim digital onde ideias
-                florescem através da polinização cruzada de mentes criativas, criando algo maior que a soma das partes.
-              </p>
-            </div>
-          </section>
-
-          {/* Features */}
-          <section className="wuxia-border wuxia-glow rounded-lg p-8 bg-black/50">
-            <h3 className="text-3xl font-bold text-green-400 mb-6 text-center">
-              Os Jardins da Imaginação
-            </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="text-3xl mb-3">🤝</div>
-                <h4 className="font-bold text-green-400 mb-2">Colaboração Orgânica</h4>
-                <p className="text-gray-300 text-sm">Escritores trabalhando juntos para cultivar narrativas ricas e complexas.</p>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl mb-3">🌿</div>
-                <h4 className="font-bold text-green-400 mb-2">Crescimento Evolutivo</h4>
-                <p className="text-gray-300 text-sm">Histórias que evoluem naturalmente através de contribuições comunitárias.</p>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl mb-3">🔗</div>
-                <h4 className="font-bold text-green-400 mb-2">Conexões Narrativas</h4>
-                <p className="text-gray-300 text-sm">Universos interconectados onde histórias se entrelaçam e influenciam.</p>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl mb-3">🎭</div>
-                <h4 className="font-bold text-green-400 mb-2">Personagens Coletivos</h4>
-                <p className="text-gray-300 text-sm">Serem digitais moldados pela imaginação de múltiplos criadores.</p>
-              </div>
-            </div>
-          </section>
-
-          {/* Development Insights */}
-          <section className="wuxia-border wuxia-glow rounded-lg p-8 bg-black/50">
-            <h3 className="text-3xl font-bold text-green-400 mb-6 text-center">
-              Lições da Jardinagem Digital
-            </h3>
-            <div className="space-y-6">
-              <div className="border-l-4 border-green-500 pl-6">
-                <h4 className="text-lg font-bold text-green-400 mb-2">Arquitetura Orgânica</h4>
-                <p className="text-gray-300">
-                  Plataformas sociais devem crescer como jardins, não como máquinas. Sistemas que se adaptam ao
-                  comportamento natural dos usuários criam experiências mais autênticas.
-                </p>
-              </div>
-              <div className="border-l-4 border-green-500 pl-6">
-                <h4 className="text-lg font-bold text-green-400 mb-2">Equilíbrio Criativo</h4>
-                <p className="text-gray-300">
-                  Facilitar a criação coletiva requer equilíbrio delicado entre estrutura e liberdade. Muito controle
-                  sufoca a criatividade; pouca orientação leva ao caos.
-                </p>
-              </div>
-              <div className="border-l-4 border-green-500 pl-6">
-                <h4 className="text-lg font-bold text-green-400 mb-2">Comunidade como Ecossistema</h4>
-                <p className="text-gray-300">
-                  Construir comunidades é como cultivar ecossistemas. Cada membro é uma espécie valiosa que contribui
-                  para a saúde e diversidade do todo.
-                </p>
-              </div>
-            </div>
-          </section>
-        </main>
-
-        {/* Footer */}
-        <footer className="text-center mt-16">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <a
-              href="https://universohistorias.netlify.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
-              🌟 Acessar Universo de Histórias Online 🌟
-            </a>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/projetos"
-              className="inline-block px-6 py-3 bg-gradient-to-r from-green-600 to-green-800 text-white font-bold rounded-lg hover:from-green-700 hover:to-green-900 transition-all duration-300"
-            >
-              ← Voltar aos Projetos
-            </Link>
-            <Link
-              href="/devlog"
-              className="inline-block px-6 py-3 border border-green-500 text-green-400 font-bold rounded-lg hover:bg-green-500 hover:text-white transition-all duration-300"
-            >
-              Seguir a Jornada no Devlog →
-            </Link>
-          </div>
-        </footer>
-      </div>
-    </div>
-  )
-}
+export default function UniversoHistoriasPage(){return <div className="portfolio-shell universe-case"><SiteHeader/><main>
+  <header className="universe-hero"><div className="universe-lines"/><div className="case-topline"><Link href="/projetos">← Retornar ao mapa</Link><span>Território 03 · Produto digital</span></div><span className="universe-glyph">書</span><div><span className="eyebrow">O arquivo vivo</span><h1>Universo<br/>de <em>Histórias.</em></h1><p>Um lugar para histórias encontrarem leitores — e para autores transformarem ideias em obras publicadas.</p></div><a href="#produto">Abrir o arquivo ↓</a></header>
+  <section id="produto" className="universe-statement"><span className="eyebrow">O produto</span><h2>Da primeira palavra à publicação, uma plataforma construída para <em>continuar existindo.</em></h2><div><p>Universo de Histórias deixou de ser apenas uma visão de produto. A plataforma possui uma experiência reavaliada, fluxos funcionais e uma camada persistente para sustentar conteúdo real.</p><p>O marco atual muda a natureza do trabalho: o desenvolvimento deixa de perseguir uma lista abstrata de funcionalidades e passa a aguardar uso real para orientar manutenção e melhoria contínua.</p></div></section>
+  <section className="universe-window"><div className="universe-live"><Image src="/evidencias/universo-biblioteca-persistencia.png" alt="Biblioteca pública do Universo de Histórias exibindo histórias persistidas" fill sizes="(max-width: 800px) 100vw, 86vw" /></div><div><span className={styles.figureCaption}>FIG. 01 · PERSISTÊNCIA PÚBLICA</span><p className={styles.figureNote}>Após cadastro, autenticação e publicação, a história de evidência reapareceu na biblioteca em uma sessão pública sem login.</p></div><div className="universe-proof-grid"><figure><div><Image src="/evidencias/universo-historia-publicada.png" alt="Página pública da história O Limiar, com autoria e capítulo publicados" fill sizes="(max-width: 800px) 100vw, 58vw" /></div><figcaption>FIG. 02 · História publicada com autoria, sinopse e capítulo acessíveis.</figcaption></figure><figure><div><Image src="/evidencias/universo-welcome-mobile.png" alt="Universo de Histórias executado em viewport móvel" fill sizes="300px" /></div><figcaption>FIG. 03 · Entrada pública em viewport móvel.</figcaption></figure></div><a className="live-product-link" href="https://universohistorias.vercel.app/story/6a72c72fba2c3dcd4d32e19c" target="_blank" rel="noreferrer">Abrir a evidência publicada ↗</a></section>
+  <section className="universe-foundations"><header><span className="eyebrow">Fundamentos</span><h2>Publicado não significa terminado.</h2></header><div>{fundamentos.map(f=><article key={f[0]}><span>{f[0]}</span><h3>{f[1]}</h3><p>{f[2]}</p></article>)}</div></section>
+  <section className="universe-state"><div><span className="eyebrow">Estado verificado</span><h2>Produto funcional.<br/><em>Próxima fase: pessoas.</em></h2></div><div><p>A coleta percorreu a jornada completa em produção: criação de conta autora, login, publicação, nova consulta pública e abertura da história persistida.</p><ul><li><span>01</span>Biblioteca e conteúdo público operacionais</li><li><span>02</span>Cadastro, login e perfil persistente verificados</li><li><span>03</span>Autoria, publicação e leitura pública verificadas</li></ul></div></section>
+  <nav className="case-next"><Link href="/landing-pages"><span>Território anterior</span><b>Cinco Mundos</b></Link><Link href="/projetos"><span>Fechar o arquivo</span><b>Retornar ao mapa ↗</b></Link></nav>
+  </main><SiteFooter/></div>}
