@@ -279,13 +279,13 @@ html { scroll-behavior:smooth; }
 .project-list { border-top:1px solid var(--line); }
 .project-row { color:var(--ink);text-decoration:none;display:grid;grid-template-columns:50px minmax(220px,.8fr) 1.1fr 50px;gap:35px;align-items:center;padding:28px 0;border-bottom:1px solid var(--line); }
 .project-index { font:italic 15px Georgia,serif;align-self:start; }
-.project-visual { height:260px;display:grid;place-items:center;overflow:hidden;transition:.45s cubic-bezier(.2,.8,.2,1); }
-.project-visual span { font-size:clamp(70px,10vw,150px);font-weight:800;letter-spacing:-.12em;color:#ffffff20; }
-.project-echoes .project-visual { background:radial-gradient(circle at 70% 30%,#a83838,#1b1217 65%); }
-.project-landings .project-visual { background:linear-gradient(135deg,#d9ff52,#388077); }
-.project-historias .project-visual { background:radial-gradient(circle at 25% 25%,#d7bd75,#244239 70%); }
+.project-visual { height:260px;display:grid;place-items:center;overflow:hidden;position:relative;background:#1b1d1b;transition:.45s cubic-bezier(.2,.8,.2,1); }
+.project-visual:after { content:"";position:absolute;inset:0;background:linear-gradient(135deg,#10121188,#10121110 58%,#10121177);z-index:1; }
+.project-image { object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1),filter .45s ease; }
+.project-visual span { position:relative;z-index:2;font-size:clamp(70px,10vw,150px);font-weight:800;letter-spacing:-.12em;color:#ffffff30;text-shadow:0 2px 18px #000a; }
 .project-overdrive .project-visual { background:linear-gradient(135deg,#7b2dca,#131329 65%); }
-.project-row:hover .project-visual { transform:scale(.98);filter:saturate(1.2); }
+.project-row:hover .project-visual { transform:scale(.98); }
+.project-row:hover .project-image { transform:scale(1.06);filter:saturate(1.1); }
 .project-copy small { text-transform:uppercase;letter-spacing:.14em;font-size:9px;color:#696b66; }
 .project-copy h3 { font-size:clamp(32px,4vw,59px);letter-spacing:-.055em;margin:12px 0;font-weight:500; }
 .project-copy p { color:#656761;line-height:1.65;max-width:540px;font-size:14px; }
